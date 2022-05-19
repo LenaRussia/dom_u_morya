@@ -1,0 +1,126 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+.main {
+    width: 100%;
+    display: block;
+}
+.houses {
+    margin: 0 auto;
+    display: block;
+    width: 940px;
+}
+
+.house {
+    float: left;
+    padding-right: 20px;
+    width: 300px;
+    margin-bottom: 40px;
+}
+.house:nth-child(3n) {
+    padding-right: 0;
+}
+.house-detail {
+    display: block;
+    height: 100px;
+    color: white;
+    padding-right: 15px;
+}
+.house-name a {
+    color: rgb(140,140,140);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.house-name{
+    text-align: center;
+    line-height: 12px;
+    font-size: 17px;
+}
+.price {
+    font-size: 14px;
+    color: rgb(140,140,140);
+    text-align: center;
+    line-height: 0px;
+    font-weight: lighter;
+}
+.logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 8px;
+    width: 220px;
+}
+.logo-container {
+    display: block;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(222, 222, 222);
+    margin-bottom: 40px;
+}
+.search-form-wrapper{
+    margin: 0 auto;
+    display: block;
+    width: 940px;
+}
+.search-form {
+    margin: 0;
+    height: 70px;
+    font-size: 12px;
+}
+.search-form p {
+    float: left;
+    margin-left: 15px;
+}
+.search-form input {
+    outline: none;
+    border: 1px solid lightgray;
+    width: 90px;
+    margin-right: 10px;
+}
+.search-form input[type=number] {
+    width: 50px;
+}
+.search-form input[type=submit] {
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 12px 0 0 50px;
+    padding: 10px;
+    background-color: #66df99;
+    border: 0;
+    width: 120px;
+}
+.search-form select {
+    outline: none;
+    border: 1px solid lightgrey;
+    width: 120px;
+}
+.search-form-price {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 2px;
+}
+
+
+
+footer {
+    display: block;
+    background-color: rgb(222, 222, 222);
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    text-align: center;
+    color: grey;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-top: 20px;
+}

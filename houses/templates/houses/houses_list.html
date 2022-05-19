@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% load thumbnail %}
+{% load humanize %}
+{% block application %}
+<div class="main">
+        <div class="search-form-wrapper">
+            <form method="get" class="search-form">
+                <p class="search-form-price">цена</p>{{ form.as_p }}
+                <input type="submit" value="посмотреть">
+            </form>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="houses">
+
+            {% for house in houses %}
+                <div class="house">
+                    {% thumbnail house.photo '300x200' crop='center' as im %}
+                         <a href="{% url 'house' house_id=house.id %}"><img src ='{{ im.url }}' alt = '{{ house.name }}'></a>
+                    {% endthumbnail %}
+                    <h2 class="house-name"><a href="{% url 'house' house_id=house.id %}">{{ house.name }}</a></h2>
+                    <div class="price">{{ house.price | intcomma }} руб.</div>
+                </div>
+            {% endfor %}
+
+            <div class="clearfix"></div>
+        </div>
+</div>
+{% endblock %}
+

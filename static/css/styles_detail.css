@@ -1,0 +1,53 @@
+ul,li {
+    margin: 0;
+    padding: 0;
+}
+.houses_detail {
+    margin-left: 40px;
+}
+.house_detail_name {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.float {
+    float: left;
+}
+.house_detail_name_and_price {
+    list-style: none;
+    color: grey;
+    margin: 0;
+}
+.house_detail_price {
+    margin: -6px 0 0 30px;
+    background-color: lightgray;
+    color: grey;
+    padding: 10px;
+}
+.house_detail_form {
+    margin-left: 30px;
+}
+.house-description {
+    color: gray;
+    width: 300px;
+    margin: 0 0 30px 30px;
+    font-size: 12px;
+}
+button {
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 9px 0 9px 0;
+    background-color: #66df99;
+    border: 0;
+    width: 200px;
+}
+form input {
+    width: 160px;
+}
+.form {
+    width: 300px;
+    background-color: rgb(222, 222, 222);
+    padding: 10px;
+    margin-left: 30px;
+    font-size: 12px;
+}

@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% load thumbnail %}
+{% load humanize %}
+
+{% block application %}
+
+    <div class="houses_detail">
+
+        <ul class="house_detail_name_and_price">
+            <li class="float house_detail_name">{{ house.name }}</li>
+            <li class="float house_detail_price">{{ house.price | intcomma }} руб.</li>
+        </ul>
+        <div class="clearfix"></div>
+
+        <ul class="house_detail_name_and_price">
+            <li class="float">
+                {% thumbnail house.photo '600x500' crop='center' as im %}
+                    <img src ='{{ im.url }}' alt = '{{ house.name }}'
+                {% endthumbnail %}
+            </li>
+            <li class="float">
+                <div class="house-description">{{ house.description }}</div>
+                <div class="form">
+                    <h2>Заявка</h2>
+                    {% if sent %}
+                        <p>Спасибо, Ваша заявка принята!</p>
+                    {% endif %}
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+
+    </div>
+{% endblock %}
+
